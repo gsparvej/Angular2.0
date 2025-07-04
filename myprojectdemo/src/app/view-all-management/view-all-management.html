@@ -1,0 +1,36 @@
+
+
+<div class="container border rounded my-3">
+    <h1 class="text-center my-3 text-success">All Management List</h1>
+    <table class="table table-striped">
+<thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Designation</th>
+        <th>Department</th>
+        <th>Contact Number</th>
+        <th>Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor = "let m of management | async">
+        <td>{{m.id}}</td>
+        <td>{{m.name}}</td>
+        <td>{{m.email}}</td>
+        <td>{{m.designation}}</td>
+        <td>{{m.department}}</td>
+        <td>{{m.contact}}</td>
+        
+        <td>
+            <button class="btn btn-warning m-1 p-1" (click)="getManageById(m.id)">Edit</button>
+            <button class="btn btn-danger m-1 p-1" (click)="deleteManage(m.id)">Delete</button>
+        </td>
+    </tr>
+</tbody>
+
+
+</table>
+
+</div>

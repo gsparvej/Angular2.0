@@ -1,0 +1,66 @@
+{
+  "employee": [
+    {
+      "id": "6a9d",
+      "name": "Md. Parvej Hossen",
+      "designation": "ferfreg",
+      "department": "administration",
+      "startDate": "2025-06-03",
+      "address": "Dhaka",
+      "contact": "876876",
+      "salary": 12000
+    },
+    {
+      "id": "13ca",
+      "name": "Rakib",
+      "designation": "mvnv",
+      "department": "jffjfj",
+      "startDate": "2024-08-28",
+      "address": "Rajshahi",
+      "contact": "7678658",
+      "salary": 3333
+    }
+  ],
+  "management": [
+    {
+      "id": "a027",
+      "name": "Md. Parvej ",
+      "email": "parvejmd4469@gmail.com",
+      "designation": "Sr.Admin",
+      "department": "Administration",
+      "contact": "+08801906-600275"
+    },
+    {
+      "id": "7905",
+      "name": "fhh",
+      "email": "hbfgh",
+      "designation": "htyh",
+      "department": "fgh",
+      "contact": "567567"
+    },
+    {
+      "id": "4c3e",
+      "name": "Md. Parvej Hossen",
+      "email": "",
+      "designation": "",
+      "department": "",
+      "contact": ""
+    }
+  ],
+  "locations": [
+
+    {
+      "id": "1",
+      "address": "Dhaka",
+      "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/b3/d1/d8/lalbagh-fort.jpg?w=600&h=-1&s=1"
+    },
+     {
+      "id": "2",
+      "address": "Rajshahi",
+       "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/58/3e/b0/bhubaneswar-shiva-temple.jpg?w=700&h=400&s=1"
+    }
+
+
+
+  ]
+}

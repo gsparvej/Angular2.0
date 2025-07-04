@@ -1,0 +1,43 @@
+<div class="container border rounded my-3">
+    <h1 class="text-center text-success">Management Information Form</h1>
+
+    <form [formGroup]="formGroup" method="post">
+
+     <div class="mb-3">
+    <label for="" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name" placeholder="Input Your Full Name">
+  </div>
+
+  <div class="row">
+    <div class=" col-md-6">
+    <label for="" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" formControlName="email"  placeholder="Input Your Email Address">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+ <div class="mb-3">
+    <label for="" class="form-label">Designation</label>
+    <input type="text" class="form-control" id="name" formControlName="designation" placeholder="Input Your Full Name">
+  </div>
+  <div class="mb-3">
+    <label for="" class="form-label">Department</label>
+    <input type="text" class="form-control" id="name" formControlName="department" placeholder="Input Your Full Name">
+  </div>
+
+
+  <div class="col-md-6">
+    <label for="" class="form-label">Contact</label>
+    <input type="text" class="form-control" id="contact" formControlName="contact" placeholder="Fees">
+  </div>
+  </div>
+
+    <div class="row mt-3 text-center">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success text-center mb-2"  (click)="addManagement()">Save</button>
+            </div>
+            <div class="col-md-6">
+                <button type="reset" class="btn btn-danger text-center mb-2" >Reset</button>
+            </div>
+        </div>
+</form>
+
+</div>
