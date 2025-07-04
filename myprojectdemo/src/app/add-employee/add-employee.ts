@@ -12,7 +12,7 @@ import { Employee } from '../../model/employee.model';
   styleUrl: './add-employee.css'
 })
 export class AddEmployee implements OnInit{
-
+locations : Location[] = [];
   formGroup! : FormGroup;
 
   constructor(
@@ -33,6 +33,11 @@ private formBuilder : FormBuilder
     startDate : [''],
     contact : [''],
     salary : [''],
+     location : this.formBuilder.group({
+
+      address :['']
+    
+    })
 
    });
   }

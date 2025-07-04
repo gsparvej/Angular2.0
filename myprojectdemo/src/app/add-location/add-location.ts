@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { LocationService } from '../service/location.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-location',
@@ -7,5 +10,54 @@ import { Component } from '@angular/core';
   styleUrl: './add-location.css'
 })
 export class AddLocation {
+
+   formGroup !: FormGroup;
+
+
+  constructor(
+    private locationService: LocationService,
+    private formBuilder: FormBuilder,
+    private router: Router,
+
+  ) { }
+
+
+  ngOnInit(): void {
+
+    this.formGroup = this.formBuilder.group({
+
+      name: [''],    
+      photo: ['']
+
+    });
+
+
+  }
+
+
+  addLocation(): void {
+
+    const l: Location = { ...this.formGroup.value };
+
+     this.locationService.saveLocation(l).subscribe({
+
+    next: (res) => {
+
+      console.log("Location Saved ", res);
+      this.formGroup.reset();
+      this.router.navigate(['/allloc']);
+
+    },
+
+      error: (error) => {
+
+        console.log(error);
+
+      }
+
+
+
+  })
+}
 
 }
