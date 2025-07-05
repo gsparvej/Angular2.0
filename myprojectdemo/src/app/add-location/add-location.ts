@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { LocationService } from '../service/location.service';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { Location } from '../../model/location.model';
   templateUrl: './add-location.html',
   styleUrl: './add-location.css'
 })
-export class AddLocation {
+export class AddLocation implements OnInit{
 
    formGroup !: FormGroup;
 

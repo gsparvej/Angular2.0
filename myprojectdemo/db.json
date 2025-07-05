@@ -11,6 +11,18 @@
       "locations": {
         "address": "Rajshahi"
       }
+    },
+    {
+      "id": "3123",
+      "name": "Eiasin",
+      "designation": "gjj",
+      "department": "jjuyj",
+      "startDate": "2025-03-05",
+      "contact": "01906600275",
+      "salary": 2354,
+      "location": {
+        "address": ""
+      }
     }
   ],
   "management": [
@@ -51,14 +63,24 @@
       "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/58/3e/b0/bhubaneswar-shiva-temple.jpg?w=700&h=400&s=1"
     },
     {
-      "id": "bf1e",
-      "address": "Mymensingh",
+      "id": "7aba",
+      "address": "",
       "image": ""
     },
     {
-      "id": "aeea",
+      "id": "f394",
       "address": "Rangpur",
-      "image": ""
+      "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/b3/d1/d8/lalbagh-fort.jpg?w=600&h=-1&s=1"
+    },
+    {
+      "id": "15bb",
+      "address": "Sylhet",
+      "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/b3/d1/d8/lalbagh-fort.jpg?w=600&h=-1&s=1"
+    },
+    {
+      "id": "5361",
+      "address": "Mymensingh",
+      "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npPn376szI261kre6S3_QVPObhCystIBN4ikHKgAOoI3fzxGzME_yXTUKobM_qbRTYX_T2jrEaljN9VEULgf_na82z3SiRbzRDAlMkwtVwLs5GAaX_9BSP397yp6fxVWnBmE4umrw=s680-w680-h510-rw"
     }
   ]
 }
