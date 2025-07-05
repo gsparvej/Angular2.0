@@ -27,8 +27,8 @@ export class AddLocation {
 
     this.formGroup = this.formBuilder.group({
 
-      name: [''],    
-      photo: ['']
+      address: [''],    
+      image: ['']
 
     });
 
