@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { LocationService } from '../service/location.service';
 import { Router } from '@angular/router';
+import { Location } from '../../model/location.model';
 
 @Component({
   selector: 'app-add-location',
@@ -37,9 +38,9 @@ export class AddLocation {
 
   addLocation(): void {
 
-    const l: Location = { ...this.formGroup.value };
+    const loc: Location = { ...this.formGroup.value };
 
-     this.locationService.saveLocation(l).subscribe({
+     this.locationService.saveLocation(loc).subscribe({
 
     next: (res) => {
 
