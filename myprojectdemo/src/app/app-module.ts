@@ -16,6 +16,8 @@ import { ViewAllEmployee } from './view-all-employee/view-all-employee';
 import { UpdateEmployee } from './update-employee/update-employee';
 import { ViewAllLocation } from './view-all-location/view-all-location';
 import { AddLocation } from './add-location/add-location';
+import { CreateOrder } from './Trial/create-order/create-order';
+import { FabricTable } from './Trial/fabric-table/fabric-table';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { AddLocation } from './add-location/add-location';
     ViewAllEmployee,
     UpdateEmployee,
     ViewAllLocation,
-    AddLocation
+    AddLocation,
+    CreateOrder,
+    FabricTable
   ],
   imports: [
     BrowserModule,

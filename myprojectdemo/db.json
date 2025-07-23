@@ -69,5 +69,43 @@
       "address": "Mymensingh",
       "image": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4npPn376szI261kre6S3_QVPObhCystIBN4ikHKgAOoI3fzxGzME_yXTUKobM_qbRTYX_T2jrEaljN9VEULgf_na82z3SiRbzRDAlMkwtVwLs5GAaX_9BSP397yp6fxVWnBmE4umrw=s680-w680-h510-rw"
     }
+  ],
+  "order": [
+    {
+      "id": "3bdf",
+      "size": "S",
+      "quantity": 10,
+      "price": 50
+    },
+    {
+      "id": "c68e",
+      "size": "M",
+      "quantity": 20,
+      "price": 100
+    },
+    {
+      "id": "3f98",
+      "size": "L",
+      "quantity": 30,
+      "price": 30
+    },
+    {
+      "id": "c7da",
+      "size": "M",
+      "quantity": 100,
+      "price": 250
+    },
+    {
+      "id": "0aee",
+      "size": "S",
+      "quantity": 100,
+      "price": 230
+    },
+    {
+      "id": "4366",
+      "size": "L",
+      "quantity": 100,
+      "price": 300
+    }
   ]
 }
