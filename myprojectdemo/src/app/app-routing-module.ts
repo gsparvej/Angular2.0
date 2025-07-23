@@ -11,6 +11,7 @@ import { UpdateEmployee } from './update-employee/update-employee';
 import { ViewAllLocation } from './view-all-location/view-all-location';
 import { AddLocation } from './add-location/add-location';
 import { CreateOrder } from './Trial/create-order/create-order';
+import { ViewOrder } from './Trial/view-order/view-order';
 
 const routes: Routes = [
   {path:'viewManagement', component: ViewAllManagement},
@@ -31,7 +32,8 @@ const routes: Routes = [
   // trial------------
 
 
-  {path: 'addOrder', component: CreateOrder}
+  {path: 'addOrder', component: CreateOrder},
+  {path: 'viewOrder', component: ViewOrder}
 ];
 
 @NgModule({

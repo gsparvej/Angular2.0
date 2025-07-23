@@ -12,14 +12,20 @@ export class TrialService {
 
   constructor(private http: HttpClient) { }
 
-  calculateTotals(orders: OrderModel[]): { totalQty: number; totalAmt: number } {
+ calculateTotals(order: OrderModel[]): { totalQty: number; totalAmt: number; updatedOrders: OrderModel[] } {
     let totalQty = 0;
     let totalAmt = 0;
-    for (let order of orders) {
+
+    const updatedOrders = order.map(order => {
+      const totalItemPrice = order.quantity * order.price;
+      order.totalQuantity = order.quantity;
+      order.totalPrice = totalItemPrice;
       totalQty += order.quantity;
-      totalAmt += order.quantity * order.price;
-    }
-    return { totalQty, totalAmt };
+      totalAmt += totalItemPrice;
+      return order;
+    });
+
+    return { totalQty, totalAmt, updatedOrders };
   }
 
   saveOrder(order: OrderModel): Observable<OrderModel> {

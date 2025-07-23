@@ -1,0 +1,44 @@
+<div class="container py-5">
+  <div class="card shadow-sm">
+    <div class="card-header bg-secondary text-white">
+      <h4 class="mb-0">📦 Shirt Order Invoice</h4>
+    </div>
+
+    <div class="card-body">
+      <div *ngIf="orders.length > 0; else noData">
+        <table class="table table-bordered table-hover">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>Size</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let order of orders; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ order.size }}</td>
+              <td>{{ order.quantity }}</td>
+              <td>{{ order.price | currency:'BDT' }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- ✅ Invoice Total Section -->
+      <div *ngIf="orders.length > 0 && orders[0].totalQuantity != null">
+  <div class="text-end mt-4">
+    <h5 class="fw-bold text-success">Invoice Summary</h5>
+    <p><strong>Total Quantity:</strong> {{ orders[0].totalQuantity }}</p>
+    <p><strong>Total Price:</strong> {{ orders[0].totalPrice | currency:'BDT' }}</p>
+  </div>
+</div>
+
+      </div>
+
+      <ng-template #noData>
+        <p class="text-muted text-center">No orders found.</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

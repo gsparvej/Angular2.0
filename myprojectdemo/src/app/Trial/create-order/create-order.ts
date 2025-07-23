@@ -15,27 +15,48 @@ export class CreateOrder{
     { size: 'M', quantity: 0, price: 0 },
     { size: 'L', quantity: 0, price: 0 }
   ];
-
-  totalQuantity: number = 0;
-  totalPrice: number = 0;
-
-  constructor(private trialService: TrialService) {}
+   totalQuantity = 0;
+  totalPrice = 0;
+  constructor(private ts: TrialService){}
 
   calculateTotals(): void {
-    const { totalQty, totalAmt } = this.trialService.calculateTotals(this.order);
+    let totalQty = 0;
+    let totalAmt = 0;
+
+    for (let item of this.order) {
+      totalQty += item.quantity;
+      totalAmt += item.quantity * item.price;
+    }
+
     this.totalQuantity = totalQty;
     this.totalPrice = totalAmt;
   }
 
   saveOrders(): void {
-    this.trialService.saveMultipleOrders(this.order).subscribe({
-      next: (res) => {
-        console.log('Orders saved successfully:', res);
-        alert('Orders saved to db.json successfully!');
+    // ✅ First calculate grand totals
+    let totalQty = 0;
+    let totalAmt = 0;
+
+    for (let item of this.order) {
+      totalQty += item.quantity;
+      totalAmt += item.quantity * item.price;
+    }
+
+    // ✅ Add the same total to every item
+    const ordersWithTotals: OrderModel[] = this.order.map(item => ({
+      ...item,
+      totalQuantity: totalQty,
+      totalPrice: totalAmt
+    }));
+
+    this.ts.saveMultipleOrders(ordersWithTotals).subscribe({
+      next: res => {
+        console.log('Orders saved with unified totals:', res);
+        alert('Orders saved to db.json with shared totalQuantity and totalPrice!');
       },
-      error: (err) => {
-        console.error('Error saving orders:', err);
-        alert('Failed to save orders.');
+      error: err => {
+        console.error('Save failed:', err);
+        alert('Save failed!');
       }
     });
   }

@@ -4,4 +4,7 @@ export interface OrderModel {
   size: 'S' | 'M' | 'L';
   quantity: number;
   price: number;
+  totalQuantity?: number;
+  totalPrice?: number;
+  
 }

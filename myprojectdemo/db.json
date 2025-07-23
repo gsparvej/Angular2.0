@@ -72,40 +72,28 @@
   ],
   "order": [
     {
-      "id": "3bdf",
+      "id": "6ebc",
       "size": "S",
-      "quantity": 10,
-      "price": 50
+      "quantity": 3000,
+      "price": 250,
+      "totalQuantity": 10500,
+      "totalPrice": 2970000
     },
     {
-      "id": "c68e",
+      "id": "63ab",
       "size": "M",
-      "quantity": 20,
-      "price": 100
+      "quantity": 3500,
+      "price": 280,
+      "totalQuantity": 10500,
+      "totalPrice": 2970000
     },
     {
-      "id": "3f98",
+      "id": "3c6d",
       "size": "L",
-      "quantity": 30,
-      "price": 30
-    },
-    {
-      "id": "c7da",
-      "size": "M",
-      "quantity": 100,
-      "price": 250
-    },
-    {
-      "id": "0aee",
-      "size": "S",
-      "quantity": 100,
-      "price": 230
-    },
-    {
-      "id": "4366",
-      "size": "L",
-      "quantity": 100,
-      "price": 300
+      "quantity": 4000,
+      "price": 310,
+      "totalQuantity": 10500,
+      "totalPrice": 2970000
     }
   ]
 }

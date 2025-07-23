@@ -18,6 +18,7 @@ import { ViewAllLocation } from './view-all-location/view-all-location';
 import { AddLocation } from './add-location/add-location';
 import { CreateOrder } from './Trial/create-order/create-order';
 import { FabricTable } from './Trial/fabric-table/fabric-table';
+import { ViewOrder } from './Trial/view-order/view-order';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FabricTable } from './Trial/fabric-table/fabric-table';
     ViewAllLocation,
     AddLocation,
     CreateOrder,
-    FabricTable
+    FabricTable,
+    ViewOrder
   ],
   imports: [
     BrowserModule,
