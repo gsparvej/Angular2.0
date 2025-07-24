@@ -94,6 +94,30 @@
       "price": 310,
       "totalQuantity": 10500,
       "totalPrice": 2970000
+    },
+    {
+      "id": "84dd",
+      "size": "S",
+      "quantity": 20,
+      "price": 200,
+      "totalQuantity": 80,
+      "totalPrice": 18700
+    },
+    {
+      "id": "2559",
+      "size": "M",
+      "quantity": 30,
+      "price": 240,
+      "totalQuantity": 80,
+      "totalPrice": 18700
+    },
+    {
+      "id": "7098",
+      "size": "L",
+      "quantity": 30,
+      "price": 250,
+      "totalQuantity": 80,
+      "totalPrice": 18700
     }
   ]
 }
