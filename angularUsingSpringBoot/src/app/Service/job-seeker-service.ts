@@ -14,7 +14,7 @@ export class JobSeekerService {
   registerJobSeeker(user:any, jobseeker: any, photo: File): Observable<any> {
     const formData = new FormData();
     formData.append('user', JSON.stringify(user));
-    formData.append('jobseeker', JSON.stringify(jobseeker));
+    formData.append('jobSeeker', JSON.stringify(jobseeker));
     formData.append('photo', photo);
 
     return this.http.post(this.baseUrl, formData);
