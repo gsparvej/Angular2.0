@@ -9,24 +9,20 @@ import { JobSeekerService } from '../../Service/job-seeker-service';
   styleUrl: './add-jobseeker-component.css'
 })
 export class AddJobseekerComponent {
-  userForm: FormGroup;
+   userForm: FormGroup;
   jobSeekerForm: FormGroup;
   photoFile!: File;
   message: string = '';
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private jobSeekerService: JobSeekerService
-  ) {
-    this.userForm = formBuilder.group({
+  constructor(private fb: FormBuilder, private jobseekerService: JobSeekerService) {
+    this.userForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
-      password: ['', Validators.required],
-
+      password: ['', Validators.required]
     });
 
-    this.jobSeekerForm = formBuilder.group({
+    this.jobSeekerForm = this.fb.group({
       gender: ['', Validators.required],
       address: ['', Validators.required],
       dateOfBirth: ['', Validators.required]
@@ -36,27 +32,28 @@ export class AddJobseekerComponent {
   onPhotoSelected(event: any): void {
     if (event.target.files.length > 0) {
       this.photoFile = event.target.files[0];
-      console.log('Selected File : ', this.photoFile);
+      console.log('Selected file:', this.photoFile);
     }
-
   }
-  onSubmit(): void {
 
+  onSubmit(): void {
     if (!this.photoFile) {
-      this.message = 'Please Upload a Photo.';
+      this.message = 'Please upload a photo.';
       return;
     }
     if (this.userForm.invalid || this.jobSeekerForm.invalid) {
       this.message = 'Please fill out all required fields.';
       return;
     }
+
     const user = {
       name: this.userForm.value.name,
       email: this.userForm.value.email,
       phone: this.userForm.value.phone,
       password: this.userForm.value.password,
-      role: 'JOBSEEKER'
+      role: 'JOBSEEKER' // adjust if necessary
     };
+
     const jobSeeker = {
       name: this.userForm.value.name,
       email: this.userForm.value.email,
@@ -66,10 +63,9 @@ export class AddJobseekerComponent {
       dateOfBirth: this.jobSeekerForm.value.dateOfBirth
     };
 
-    this.jobSeekerService.registerJobSeeker(user, jobSeeker, this.photoFile).subscribe({
-
+    this.jobseekerService.registerJobSeeker(user, jobSeeker, this.photoFile).subscribe({
       next: res => {
-        this.message = res.message || 'Registration Succesfully!';
+        this.message = res.Message || 'Registration successful!';
         this.userForm.reset();
         this.jobSeekerForm.reset();
         this.photoFile = undefined!;
@@ -78,8 +74,6 @@ export class AddJobseekerComponent {
         this.message = 'Registration failed: ' + (err.error?.Message || err.message);
       }
     });
-
-
   }
 
 }

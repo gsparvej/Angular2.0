@@ -8,12 +8,16 @@ import { User } from '../../model/user.model';
   providedIn: 'root'
 })
 export class UserService {
-   private baseUrl = environment.apiBaseUrl+'/user/';
+      private baseUrl = environment.apiBaseUrl+'/user/';
 
-  constructor(private http:HttpClient) {}
+  constructor(private http:HttpClient) { }
 
-  getAllUser(): Observable<User[]> {
+
+  getAllUser():Observable<User[]>{
+
     return this.http.get<User[]>(this.baseUrl);
   }
+
+
   
 }
