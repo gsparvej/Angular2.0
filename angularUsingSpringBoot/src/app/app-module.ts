@@ -8,13 +8,15 @@ import { AllUserComponent } from './User/all-user-component/all-user-component';
 import { AddJobseekerComponent } from './JobSeeker/add-jobseeker-component/add-jobseeker-component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { AllJobSeekerComponent } from './JobSeeker/all-job-seeker-component/all-job-seeker-component';
 
 @NgModule({
   declarations: [
     App,
     AddUserComponent,
     AllUserComponent,
-    AddJobseekerComponent
+    AddJobseekerComponent,
+    AllJobSeekerComponent
   ],
   imports: [
     BrowserModule,

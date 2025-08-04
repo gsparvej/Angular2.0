@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environment/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { JobSeeker } from '../../model/jobseeker.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +20,10 @@ export class JobSeekerService {
 
     return this.http.post(this.baseUrl, formData);
   }
+
+   getAllJobSeeker():Observable<JobSeeker[]>{
+  
+      return this.http.get<JobSeeker[]>(this.baseUrl);
+    }
   
 }

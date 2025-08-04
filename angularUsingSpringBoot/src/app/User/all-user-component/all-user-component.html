@@ -1,8 +1,17 @@
-
-<div *ngFor="let u of users">
-    <p>Name: {{u.name}}</p>
-    <p>Email: {{u.email}}</p>
-    <p>Phone: {{u.phone}}</p>
-    <p> <img [src]="'http://localhost:8080/images/users/'+u.photo" height="100" width="100"> </p>
-
+<div class="container mt-4">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let u of users">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <img [src]="'http://localhost:8080/images/users/' + u.photo"
+               class="rounded-circle mb-3 border"
+               style="width: 100px; height: 100px; object-fit: cover;"
+               alt="User Photo">
+          <h5 class="card-title mb-2">{{ u.name }}</h5>
+          <p class="card-text mb-1"><strong>Email:</strong> {{ u.email }}</p>
+          <p class="card-text"><strong>Phone:</strong> {{ u.phone }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
