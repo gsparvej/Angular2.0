@@ -9,7 +9,7 @@ import { JobSeekerService } from '../../Service/job-seeker-service';
   styleUrl: './add-jobseeker-component.css'
 })
 export class AddJobseekerComponent {
-   userForm: FormGroup;
+  userForm: FormGroup;
   jobSeekerForm: FormGroup;
   photoFile!: File;
   message: string = '';
