@@ -1,23 +1,31 @@
-
 <div class="container mt-4">
   <div class="row row-cols-1 row-cols-md-2 g-4">
-    <div class="col" *ngFor="let job of jobseekers">
-      <div class="card h-100 shadow-sm">
-        <div class="row g-0">
-          <div class="col-md-4 d-flex align-items-center justify-content-center p-2">
-            <img [src]="'http://localhost:8080/images/jobSeeker/' + job.photo" class="img-fluid rounded-circle border" alt="Jobseeker Photo" style="height: 100px; width: 100px; object-fit: cover;">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">{{ job.name }}</h5>
-              <p class="card-text mb-1"><strong>Email:</strong> {{ job.email }}</p>
-              <p class="card-text mb-1"><strong>Phone:</strong> {{ job.phone }}</p>
-              <p class="card-text mb-1"><strong>Address:</strong> {{ job.address }}</p>
-              <p class="card-text"><strong>DOB:</strong> {{ job.dateOfBirth }}</p>
+
+    @for (job of jobseekers; track job.id) {
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center justify-content-center p-2">
+              <img
+                [src]="'http://localhost:8080/images/jobSeeker/' + job.photo"
+                class="img-fluid rounded-circle border"
+                alt="Jobseeker Photo"
+                style="height: 100px; width: 100px; object-fit: cover;"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ job.name }}</h5>
+                <p class="card-text mb-1"><strong>Email:</strong> {{ job.email }}</p>
+                <p class="card-text mb-1"><strong>Phone:</strong> {{ job.phone }}</p>
+                <p class="card-text mb-1"><strong>Address:</strong> {{ job.address }}</p>
+                <p class="card-text"><strong>DOB:</strong> {{ job.dateOfBirth }}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    }
+
   </div>
 </div>
